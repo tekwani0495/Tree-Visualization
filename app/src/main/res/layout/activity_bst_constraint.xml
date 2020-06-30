@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dream.treevisualizer.BinarySearchTreeActivity">
+
+
+    <EditText
+        android:id="@+id/insertTextId"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/insertButtonId"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="55dp"
+        android:ems="10"
+        android:inputType="number"
+        android:maxLength="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/insertButtonId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:text="INSERT"
+        app:layout_constraintBaseline_toBaselineOf="@+id/insertTextId"
+        app:layout_constraintStart_toEndOf="@+id/insertTextId" />
+
+    <EditText
+        android:id="@+id/deleteTextId"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/insertTextId"
+        android:layout_alignBottom="@+id/insertTextId"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@+id/insertButtonId"
+        android:ems="10"
+        android:maxLength="2"
+        android:inputType="number"
+        app:layout_constraintBaseline_toBaselineOf="@+id/insertButtonId"
+        app:layout_constraintStart_toEndOf="@+id/insertButtonId" />
+
+    <EditText
+        android:id="@+id/findTextId"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/insertTextId"
+        android:ems="10"
+        android:maxLength="2"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@+id/insertTextId"
+        app:layout_constraintTop_toBottomOf="@+id/insertTextId" />
+
+    <Button
+        android:id="@+id/deleteButtonId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/deleteTextId"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@+id/deleteTextId"
+        android:text="DELETE"
+        app:layout_constraintBaseline_toBaselineOf="@+id/deleteTextId"
+        app:layout_constraintStart_toEndOf="@+id/deleteTextId" />
+
+    <Button
+        android:id="@+id/findButtonId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/insertButtonId"
+        android:layout_below="@+id/deleteButtonId"
+        android:layout_marginStart="8dp"
+        android:text="FIND"
+        app:layout_constraintBaseline_toBaselineOf="@+id/findTextId"
+        app:layout_constraintStart_toEndOf="@+id/findTextId" />
+
+    <Button
+        android:id="@+id/printButtonId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/deleteTextId"
+        android:layout_below="@+id/deleteButtonId"
+        android:text="PREORDER"
+        app:layout_constraintStart_toStartOf="@+id/findTextId"
+        app:layout_constraintTop_toBottomOf="@+id/findTextId" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="TextView"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/printButtonId"
+        app:layout_constraintTop_toBottomOf="@+id/printButtonId" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/findButtonId"
+        android:layout_alignBottom="@+id/findButtonId"
+        android:layout_alignEnd="@+id/findTextId"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/findButtonId"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <FrameLayout
+                android:id="@+id/layout1"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+
+            </FrameLayout>
+        </HorizontalScrollView>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/heightButtonId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/deleteButtonId"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@+id/printButtonId"
+        android:text="HEIGHT"
+        app:layout_constraintBaseline_toBaselineOf="@+id/findButtonId"
+        app:layout_constraintStart_toEndOf="@+id/findButtonId" />
+
+    <Button
+        android:id="@+id/inorderButtonId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="INORDER"
+        app:layout_constraintBaseline_toBaselineOf="@+id/printButtonId"
+        app:layout_constraintStart_toEndOf="@+id/printButtonId" />
+
+    <Button
+        android:id="@+id/postorderButtonId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="POSTORDER"
+        app:layout_constraintBaseline_toBaselineOf="@+id/inorderButtonId"
+        app:layout_constraintStart_toEndOf="@+id/inorderButtonId" />
+
+    <Button
+        android:id="@+id/zoomInButton"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="I"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/heightButtonId"
+        app:layout_constraintStart_toEndOf="@+id/heightButtonId" />
+
+    <Button
+        android:id="@+id/zoomOutButton"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="O"
+        app:layout_constraintBaseline_toBaselineOf="@+id/postorderButtonId"
+        app:layout_constraintStart_toEndOf="@+id/postorderButtonId" />
+
+
+</android.support.constraint.ConstraintLayout>

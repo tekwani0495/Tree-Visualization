@@ -1,0 +1,169 @@
+<resources>
+    <string name="app_name">TreeVisualizer</string>
+    <string name="title_activity_bst">BstActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Binary Search Tree</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="store_picture_title">Save image</string>
+    <string name="store_picture_message">Allow Ad to store image in Picture gallery?</string>
+    <string name="accept">Accept</string>
+    <string name="decline">Decline</string>
+    <string name="create_calendar_title">Create calendar event</string>
+    <string name="create_calendar_message">Allow Ad to create a calendar event?</string>
+    <string name="common_google_play_services_notification_ticker">Google Play services error</string>
+    <string name="common_google_play_services_notification_needs_installation_title">An application requires installation of Google Play services.</string>
+    <string name="common_google_play_services_notification_needs_update_title">An application requires an update for Google Play services.</string>
+    <string name="common_android_wear_notification_needs_update_text">An application requires an update to the Android Wear app.</string>
+    <string name="common_google_play_services_needs_enabling_title">An application requires Google Play services to be enabled.</string>
+    <string name="common_google_play_services_error_notification_requested_by_msg">Requested by %1$s</string>
+    <string name="common_google_play_services_install_title">Get Google Play services</string>
+    <string name="common_google_play_services_install_text_phone">"This app won't run without Google Play services, which are missing from your phone."</string>
+    <string name="common_google_play_services_install_text_tablet">"This app won't run without Google Play services, which are missing from your tablet."</string>
+    <string name="common_google_play_services_install_button">Get Google Play services</string>
+    <string name="common_google_play_services_enable_title">Enable Google Play services</string>
+    <string name="common_google_play_services_enable_text">"This app won't work unless you enable Google Play services."</string>
+    <string name="common_google_play_services_enable_button">Enable Google Play services</string>
+    <string name="common_google_play_services_update_title">Update Google Play services</string>
+    <string name="common_android_wear_update_title">Update Android Wear</string>
+    <string name="common_google_play_services_update_text">"This app won't run unless you update Google Play services."</string>
+    <string name="common_android_wear_update_text">"This app won't run unless you update the Android Wear app."</string>
+    <string name="common_google_play_services_network_error_title">Network Error</string>
+    <string name="common_google_play_services_network_error_text">A data connection is required to connect to Google Play services.</string>
+    <string name="common_google_play_services_invalid_account_title">Invalid Account</string>
+    <string name="common_google_play_services_invalid_account_text">The specified account does not exist on this device. Please choose a different account.</string>
+    <string name="common_google_play_services_unknown_issue">Unknown issue with Google Play services.</string>
+    <string name="common_google_play_services_unsupported_title">Google Play services</string>
+    <string name="common_google_play_services_unsupported_text">Google Play services, which some of your applications rely on, is not supported by your device. Please contact the manufacturer for assistance.</string>
+    <string name="common_google_play_services_update_button">Update</string>
+    <string name="common_signin_button_text">Sign in</string>
+    <string name="common_signin_button_text_long">Sign in with Google</string>
+    <string name="common_open_on_phone">Open on phone</string>
+    <string name="wallet_buy_button_place_holder">Buy with Google</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="description0">src: <a href="www.geeksforgeerks.org">geeksforgeeks.org</a>" "</string>
+    <string name="description1">"
+"<b>INTRODUCTION</b>"
+
+
+Red-Black Tree is a self-balancing Binary Search Tree (BST) where every node follows following rules. "</string>
+    <string name="description2">"
+
+1) Every node has a color either red or black.
+2) Root of tree is always black.
+3) There are no two adjacent red nodes (A red node cannot have a red parent or red child).
+4) Every path from root to a NULL node has same number of black nodes."</string>
+    <string name="description3">"
+Why Red-Black Trees?
+
+ Most of the BST operations (e.g., search, max, min, insert, delete.. etc) take O(h) time where h is the height of the BST. The cost of these operations may become O(n) for a skewed Binary tree. If we make sure that height of the tree remains O(Logn) after every insertion and deletion, then we can guarantee an upper bound of O(Logn) for all these operations. The height of a Red Black tree is always O(Logn) where n is the number of nodes in the tree.
+
+Comparison with AVL Tree
+The AVL trees are more balanced compared to Red Black Trees, but they may cause more rotations during insertion and deletion. So if your application involves many frequent insertions and deletions, then Red Black trees should be preferred. And if the insertions and deletions are less frequent and search is more frequent operation, then AVL tree should be preferred over Red Black Tree.
+
+ How does a Red-Black Tree ensure balance?
+A simple example to understand balancing is, a chain of 3 nodes is not possible in red black tree. We can try any combination of colors and see all of them violate Red-Black tree property.
+
+A chain of 3 nodes is nodes is not possible in Red-Black Trees."</string>
+    <string name="description4">"
+From the above examples, we get some idea how Red-Black trees ensure balance. Following is an important fact about balancing in Red-Black Trees.
+
+Every Red Black Tree with n nodes has height &lt;= 2Log2(n+1)
+This can be proved using following facts:
+
+1) For a general Binary Tree, let k be the minimum number of nodes on all root to NULL paths, then n >= 2k – 1 (Ex. If k is 3, then n is atleast 7). This expression can also be written as k &lt;= 2Log2(n+1)
+2) From property 4 of Red-Black trees and above claim, we can say in a Red-Black Tree with n nodes, there is a root to leaf path with at-most Log2(n+1) black nodes.
+3) From property 3 of Red-Black trees, we can claim that the number black nodes in a Red-Black tree is at least ⌊ n/2 ⌋ where n is total number of nodes.
+
+From above 2 points, we can conclude the fact that Red Black Tree with n nodes has height &lt;= 2Log2(n+1)"</string>
+    <string name="description5">"
+ "<b>INSERTION</b>"
+
+ In AVL tree insertion, we used rotation as a tool to do balancing after insertion caused imbalance. In Red-Black tree, we use two tools to do balancing.
+
+1) Recoloring
+2) Rotation
+
+We try recoloring first, if recoloring doesn’t work, then we go for rotation. Following is detailed algorithm. The algorithms has mainly two cases depending upon the color of uncle. If uncle is red, we do recoloring. If uncle is black, we do rotations and/or recoloring.
+Color of a NULL node is considered as BLACK.
+
+Let x be the newly inserted node.
+
+1) Perform standard BST insertion and make the color of newly inserted nodes as RED.
+2) Do following if color of x’s parent is not BLACK or x is not root.
+ ….a) If x’s uncle is RED (Grand parent must have been black from property 4)
+ ……..(i) Change color of parent and uncle as BLACK.
+ ……..(ii) color of grand parent as RED.
+ ……..(iii) Change x = x’s grandparent, repeat steps 2 and 3 for new x. "</string>
+    <string name="description6">"….b) If x’s uncle is BLACK, then there can be four configurations for x, x’s parent (p) and x’s grandparent (g) (This is similar to AVL Tree)
+ ……..i) Left Left Case (p is left child of g and x is left child of p)
+ ……..ii) Left Right Case (p is left child of g and x is right child of p)
+ ……..iii) Right Right Case (Mirror of case a)
+ ……..iv) Right Left Case (Mirror of case c)
+
+ 3) If x is root, change color of x as BLACK (Black height of complete tree increases by 1).
+
+Following are operations to be performed in four subcases when uncle is BLACK.
+
+All four cases when Uncle is BLACK
+
+Left Left Case (See g, p and x)"</string>
+    <string name="description7">"
+Left Right Case (See g, p and x)"</string>
+    <string name="description8">"
+Right Right Case (See g, p and x)"</string>
+    <string name="description9">"
+Right Left Case (See g, p and x)"</string>
+    <string name="description10">"
+Examples of Insertion"</string>
+    <string name="description11">"
+ "<b>DELETION</b>"
+
+Insertion Vs Deletion:
+
+Like Insertion, recoloring and rotations are used to maintain the Red-Black properties.
+
+In insert operation, we check color of uncle to decide the appropriate case. In delete operation, we check color of sibling to decide the appropriate case.
+
+The main property that violates after insertion is two consecutive reds. In delete, the main violated property is, change of black height in subtrees as deletion of a black node may cause reduced black height in one root to leaf path.
+
+Deletion is fairly complex process. To understand deletion, notion of double black is used. When a black node is deleted and replaced by a black child, the child is marked as double black. The main task now becomes to convert this double black to single black.
+
+Deletion Steps
+
+Following are detailed steps for deletion.
+
+1) Perform standard BST delete. When we perform standard delete operation in BST, we always end up deleting a node which is either leaf or has only one child (For an internal node, we copy the successor and then recursively call delete for successor, successor is always a leaf node or a node with one child). So we only need to handle cases where a node is leaf or has one child. Let v be the node deleted and u be the child that replaces v.
+2) Simple Case: If either u or v is red, we mark the replaced child as black (No change in black height). Note that both u and v cannot be red as v is parent of u and two consecutive reds are not allowed in red-black tree. "</string>
+    <string name="description12">"
+3) If Both u and v are Black.
+
+ 3.1) Color u as double black. Now our task reduces to convert this double black to single black. Note that If v is leaf, then u is NULL and color of NULL is considered as black. So the deletion of a black leaf also causes a double black."</string>
+    <string name="description13">"
+ 3.2) Do following while the current node u is double black or it is not root. Let sibling of node be s.
+
+ ….(a): If sibling s is black and at least one of sibling’s children is red, perform rotation(s). Let the red child of s be r. This case can be divided in four subcases depending upon positions of s and r.
+ …………..(i) Left Left Case (s is left child of its parent and r is left child of s or both children of s are red). This is mirror of right right case shown in below diagram.
+ …………..(ii) Left Right Case (s is left child of its parent and r is right child). This is mirror of right left case shown in below diagram.
+ …………..(iii) Right Right Case (s is right child of its parent and r is right child of s or both children of s are red)"</string>
+    <string name="description14">"
+ …………..(iv) Right Left Case (s is right child of its parent and r is left child of s)"</string>
+    <string name="description15">"
+ …..(b): If sibling is black and its both children are black, perform recoloring, and recur for the parent if parent is black."</string>
+    <string name="description16">"
+ In this case, if parent was red, then we didn’t need to recur for prent, we can simply make it black (red + double black = single black)
+
+ …..(c): If sibling is red, perform a rotation to move old sibling up, recolor the old sibling and parent. The new sibling is always black (See the below diagram). This mainly converts the tree to black sibling case (by rotation) and leads to case (a) or (b). This case can be divided in two subcases.
+ …………..(i) Left Case (s is left child of its parent). This is mirror of right right case shown in below diagram. We right rotate the parent p.
+ …………..(iii) Right Case (s is right child of its parent). We left rotate the parent p."</string>
+    <string name="description17">"
+ 3.3) If u is root, make it single black and return (Black height of complete tree reduces by 1)."</string>
+    <string name="title_activity_avlcode">AVLCode</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+</resources>

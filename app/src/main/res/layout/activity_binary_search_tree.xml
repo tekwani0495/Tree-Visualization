@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#bebdbd"
+    tools:context="com.example.dream.treevisualizer.BinarySearchTreeActivity">
+
+    <EditText
+        android:id="@+id/number"
+        android:layout_width="63dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="64dp"
+        android:ems="4"
+        android:inputType="number"
+        android:focusableInTouchMode="true"
+        android:maxLength="3"
+        android:padding="1.0dip"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/insert"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="54dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="8dp"
+        android:padding="1.0dip"
+        android:text="Ins"
+        app:layout_constraintBaseline_toBaselineOf="@+id/number"
+        app:layout_constraintStart_toEndOf="@+id/number" />
+
+    <ImageView
+        android:id="@+id/search"
+        android:layout_width="46dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="64dp"
+        android:padding="1.0dip"
+        android:src="@drawable/search1"
+        app:layout_constraintStart_toEndOf="@+id/delete"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/undo"
+        android:layout_width="51dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="64dp"
+        android:padding="1.0dip"
+        android:src="@drawable/undo"
+        app:layout_constraintStart_toEndOf="@+id/reload"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/delete"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="51dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="8dp"
+        android:padding="1.0dip"
+        android:text="Del"
+        app:layout_constraintBaseline_toBaselineOf="@+id/insert"
+        app:layout_constraintStart_toEndOf="@+id/insert" />
+
+    <ImageView
+        android:id="@+id/reload"
+        android:layout_width="45dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="64dp"
+        android:padding="1.0dip"
+        android:src="@drawable/reload1"
+        app:layout_constraintStart_toEndOf="@+id/search"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/animation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/seekbar"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:padding="2.0dip"
+        android:text="Speed "
+        app:layout_constraintStart_toStartOf="@+id/number"
+        app:layout_constraintTop_toBottomOf="@+id/number" />
+
+    <SeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="129dp"
+        android:layout_height="21dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/animation"
+        app:layout_constraintStart_toEndOf="@+id/animation"
+        app:layout_constraintTop_toBottomOf="@+id/insert" />
+
+    <ScrollView
+        android:id="@+id/verticalScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/seekbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/check">
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:fillViewport="true"></HorizontalScrollView>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/inorder"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="inO"
+        app:layout_constraintBaseline_toBaselineOf="@+id/preorder"
+        app:layout_constraintStart_toEndOf="@+id/preorder" />
+
+    <TextView
+        android:id="@+id/check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/animation"
+        app:layout_constraintTop_toBottomOf="@+id/preorder" />
+
+    <Button
+        android:id="@+id/preorder"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="PRE"
+        app:layout_constraintStart_toEndOf="@+id/seekbar"
+        app:layout_constraintTop_toBottomOf="@+id/search" />
+
+    <Button
+        android:id="@+id/postorder"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="POST"
+        app:layout_constraintBaseline_toBaselineOf="@+id/inorder"
+        app:layout_constraintStart_toEndOf="@+id/inorder" />
+
+
+</android.support.constraint.ConstraintLayout>
+

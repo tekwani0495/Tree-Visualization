@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.dream.treevisualize.HomeActivity">
+
+    <item
+        android:id="@+id/action_about_us"
+        android:orderInCategory="100"
+        android:title="About Us"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_rate_us"
+        android:orderInCategory="100"
+        android:title="Rate Us"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_contact_us"
+        android:orderInCategory="100"
+        android:title="Contact Us"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_feedback"
+        android:orderInCategory="100"
+        android:title="FeedBack"
+        app:showAsAction="never" />
+
+
+</menu>
