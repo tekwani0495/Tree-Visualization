@@ -8,4 +8,4 @@
 
 ### Screenshots of App
 
-![App UI](/UI.png)
+![App UI](/SS1.png)(/SS2.png)(/SS3.png)(/SS4.png)
