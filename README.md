@@ -9,3 +9,5 @@
 ### Screenshots of App
 
 ![App UI](/1.png)
+
+![App UI](/2.png)
